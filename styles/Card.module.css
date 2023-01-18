@@ -1,0 +1,202 @@
+.wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 0;
+}
+
+.bg1 {
+  width: 100%;
+  height: 250px;
+}
+
+.bg2 {
+  display: none;
+}
+
+.cont {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  position: absolute;
+  top: 60px;
+  padding: 70px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.front,
+.back {
+  width: 330px;
+  height: 170px;
+  position: absolute;
+  max-width: 400px;
+  border-radius: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.front {
+  background-image: url("/bg-card-front.png");
+  top: 70px;
+  left: 10px;
+  z-index: 2;
+}
+
+.back {
+  background-image: url("/bg-card-back.png");
+  background-origin: border-box;
+  bottom: 0;
+  right: 10px;
+  z-index: 1;
+}
+
+.logo {
+  width: 70px;
+  position: absolute;
+  z-index: 999;
+  top: 20px;
+  left: 20px;
+}
+
+.number,
+.name,
+.date,
+.cvc {
+  position: absolute;
+  z-index: 4;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.number {
+  top: 95px;
+  font-size: 20px;
+  left: 20px;
+}
+
+.name {
+  top: 130px;
+  left: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.date {
+  top: 130px;
+  left: 220px;
+  font-size: 14px;
+}
+
+.cvc {
+  top: 73px;
+  right: 60px;
+  font-size: 13px;
+}
+
+@media (width >= 1000px) {
+  .wrapper {
+    width: 350px;
+    position: absolute;
+    left: 0;
+  }
+
+  .bg1 {
+    display: none;
+  }
+
+  .bg2 {
+    width: 100%;
+    display: block;
+    height: 100vh;
+  }
+
+  .cont {
+    top: 0;
+    bottom: 0;
+    gap: 20px;
+  }
+
+  .front,
+  .back {
+    position: relative;
+    top: 0;
+  }
+
+  .front {
+    margin-left: 150px;
+  }
+
+  .back {
+    margin-left: 250px;
+  }
+
+  .number,
+  .logo,
+  .name,
+  .date,
+  .cvc {
+    position: absolute;
+  }
+
+  .logo {
+    top: 20px;
+    left: 20px;
+  }
+
+  .number {
+    top: 95px;
+    font-size: 20px;
+    left: 20px;
+  }
+
+  .name {
+    top: 130px;
+    left: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .date {
+    top: 130px;
+    left: 220px;
+    font-size: 14px;
+  }
+
+  .cvc {
+    top: 73px;
+    right: 60px;
+    font-size: 13px;
+  }
+}
+
+@media (width >= 1200px) {
+  .cont {
+    gap: 40px;
+  }
+  .front,
+  .back {
+    scale: 1.1;
+  }
+}
+
+@media (width >= 1500px) {
+  .wrapper {
+    gap: 100px;
+  }
+
+  .front,
+  .back {
+    scale: 1.4;
+  }
+
+  .back {
+    margin-top: 70px;
+  }
+}
