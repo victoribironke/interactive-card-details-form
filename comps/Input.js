@@ -110,7 +110,7 @@ const Input = (props) => {
       </div>
       <div className={styles.inputs}>
         <input
-          type="text"
+          type="number"
           ref={month}
           placeholder="MM"
           onChange={() => props.changeMonth(month.current.value)}
@@ -118,7 +118,7 @@ const Input = (props) => {
           className={styles.input}
         />
         <input
-          type="text"
+          type="number"
           ref={year}
           placeholder="YY"
           onChange={() => props.changeYear(year.current.value)}
@@ -126,7 +126,7 @@ const Input = (props) => {
           className={styles.input}
         />
         <input
-          type="text"
+          type="number"
           placeholder="e.g. 123"
           maxLength="3"
           onChange={() => props.changeCVC(cvc.current.value)}
